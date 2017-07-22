@@ -3,8 +3,8 @@
 $date1 = new DateTime($toDate); 
 $date2 = new DateTime($fromDate);
 
-$searchFromDate = $date2->format('Y-m-d');
-$searchToDate = $date1->format('Y-m-d');
+$searchFromDate = $date2->format('Y-m-d H:i');
+$searchToDate = $date1->format('Y-m-d H:i');
 
 $movingDate = $date2;
 
