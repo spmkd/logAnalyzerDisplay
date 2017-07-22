@@ -3,6 +3,9 @@
 $date1 = new DateTime($toDate); 
 $date2 = new DateTime($fromDate);
 
+$dateCheck1 = new DateTime(substr($toDate,1,10));
+$dateCheck2 = new DateTime(substr($fromDate,1,10));
+
 $searchFromDate = $date2->format('Y-m-d H:i');
 $searchToDate = $date1->format('Y-m-d H:i');
 
@@ -10,7 +13,7 @@ $movingDate = $date2;
 
 $resultFromMovingDate = array();
 
-$interval = $date1->diff($date2);
+$interval = $dateCheck1->diff($dateCheck2);
 
 $number_of_days = $interval->days;
 
