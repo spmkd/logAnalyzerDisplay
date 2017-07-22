@@ -73,6 +73,7 @@ if ($result->num_rows > 0) {
 
 $sql2 = "SELECT hashNumber, date_format(time,'%Y-%m-%d') theDate, count(1) Occurance
 FROM shortenerrorlog
+WHERE shortenerrorlog.time >= '$searchFromDate' and shortenerrorlog.time <= '$searchToDate'
 GROUP BY hashNumber, theDate
 ORDER BY theDate;";
 
