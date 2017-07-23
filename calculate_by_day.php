@@ -33,7 +33,9 @@ for ($x = 0; $x <= $number_of_days; $x++) {
     }
     
     $resultFromMovingDate[$x] = $movingDate->format('Y-m-d');
-    echo "		<th nowrap> $resultFromMovingDate[$x] </th>";
+    $singleDayLink=$_SERVER['PHP_SELF'] . "?fromDate=" . $resultFromMovingDate[$x] . "T00:00&toDate=" . $resultFromMovingDate[$x] . "T23:59";
+    
+    echo "		<th nowrap> <a href=$singleDayLink> $resultFromMovingDate[$x] </a></th>";
 } 
 
 ?>
