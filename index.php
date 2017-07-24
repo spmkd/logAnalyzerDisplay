@@ -4,7 +4,9 @@ include 'BaseModules/data_base_connect.php';
 
 include 'BaseModules/header_date_search.php';
 
-#include 'test_query.php';
+if(!empty($_GET["showError"])){
+	include 'SpecificModules/show_error.php';
+}
 
 include 'calculate_by_day.php';
 

@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
     }
     
 } else {
-    echo "<br> 0 results <br>";
+    echo "<br> A1 - 0 results <br>";
 }
 
 # A1 END #
@@ -95,7 +95,7 @@ if ($result2->num_rows > 0) {
     }
     
 } else {
-    echo "0 results <br>";
+    echo "<br> A2 - 0 results <br>";
 }
 
 # A2 END #
@@ -108,8 +108,10 @@ for ($x = 0; $x < $numberOfUniqueHashErrors; $x++)
     $temp_uniqueHash = $hashListOrdered[$x];
     $temp_uniqueHashCount = $hashListOrderedCount[$x];
     
+    $temp_uniqueHashLink = $_SERVER['PHP_SELF'] . "?fromDate=" . $fromDate . "&toDate=" . $toDate . "&showError=" . $temp_uniqueHash;
+    
     echo "<tr>";
-    echo "<td> " . $temp_uniqueHash . "</td>";
+    echo "<td> <a href=$temp_uniqueHashLink> " . $temp_uniqueHash . " </a></td>";
     echo "<td align=\"center\"> " . $temp_uniqueHashCount . "</td>";
     
     for ($y = 0; $y <= $number_of_days; $y++)
